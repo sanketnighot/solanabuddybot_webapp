@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react"
 
-function App() {
+const App: React.FC = () => {
+  useEffect(() => {
+    const tg = window.Telegram.WebApp
+    tg.ready()
+    // You can add more initialization logic here
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+      <h1 className="text-3xl font-bold mb-4">Welcome to Telegram Web App</h1>
+      <p className="text-lg">
+        This is a basic setup for your Telegram mini app.
+      </p>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

@@ -18,9 +18,15 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "rootDir": "src"
   },
   "include": [
-    "src"
+    "src",
+    "src/types/custom.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "build"
   ]
 }
